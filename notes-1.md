@@ -21,6 +21,7 @@ applies.
 If you like, a way to understand ($) in words is: “evaluate everything to
 the right of me first.”
 
+Types are a way of categorizing values.
 
 1. An argument (also, parameter) is an input to a function. Where we
 have the function f x = x + 2 which takes an argument and returns
