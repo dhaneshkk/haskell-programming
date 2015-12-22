@@ -19,5 +19,3 @@ main = do
     putStrLn $ getNthChar "Curry is awesome!" 4
     putStrLn $ getStringFromNthChar "Curry is awesome!" 9
     putStrLn $ rvrs "JaiBhairavi"
-----let k = ("Curry is awesome"++"!")!!4  in print k
---let k = "Curry is awesome"++"!"  in print k
