@@ -15,8 +15,8 @@ module TypeClassesExercise where
  typicalCurriedFunction i b = i + (nonsense b)
 
  anonymous:: Integer->Bool->Integer
- anonymous=\i b _> i + (nonsense b)
+ anonymous=\i b -> i + (nonsense b)
 
  anonymousAndManuallyNested:: Integer->Bool->Integer
- anonymousAndManuallyNested= \i _> \b _> i +(nonsense b)
+ anonymousAndManuallyNested= \i -> \b -> i +(nonsense b)
 

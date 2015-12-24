@@ -25,6 +25,34 @@ with those functions.
 you the limitations of possible values for any type that has an instance of
 that particular typeclass
 
+Polymorphic type variables give us the ability to implement expressions
+that can accept arguments and return results of different types without
+having to write variations on the same expression for each type.
+
+type signatures may have
+"three" kinds of types: "concrete", "constrained polymorphic", or "parametrically
+polymorphic".
+
+If a type is a set of possible values, then a type variable represents a set of
+possible types. When there is no typeclass constraint, the set of possible
+types a variable could represent is effectively unlimited. Typeclass constraints
+limit the set of potential types (and, thus, potential values) while
+also passing along the common functions that can be used with those values.
+
+
+For example,an "Int" is only an Int, but it can make use of the methods of the "Num" and
+"Integral" typeclasses because it has instances of both.
+
+In sum, if a variable could be anything, then there’s little that can be done
+to it because it has no methods. If it can be some types (say, a type that
+is an instance of Num), then it has some methods. If it is a concrete type,
+you lose the type flexibility but, due to the additive nature of typeclass
+inheritance, gain more potential methods.
+
+Parametricity means that the behavior of a
+function with respect to the types of its (parametrically polymorphic) arguments
+is uniform. The behavior can not change just because it was applied
+to an argument of a different type
 
 Integral numbers : whole numbers, positive and negative.
 1. Int: This type is a fixed-precision integer. By “fixed precision,” we
